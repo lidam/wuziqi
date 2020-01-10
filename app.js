@@ -40,7 +40,7 @@ var chessGame = (function() {
   // 清空棋盘
   function clearCanvas() {
     // 清空棋盘
-    ctx.clearRect(0, 0, canvas.width, canvas.width);
+    ctx.clearRect(chessUnitWidth/2, chessUnitWidth/2, chessUnitWidth*chessUnitNum + chessUnitWidth/2, chessUnitWidth*chessUnitNum + chessUnitWidth/2);
   }
   // 是否越界
   function isCrossTheBorder(e) {
@@ -77,6 +77,15 @@ var chessGame = (function() {
     list.push(chess);
     // 棋子同步
     window.dispatchEvent(new CustomEvent('updateChessList', {detail: list}));
+    // 判断是否赢了
+    if(Chess.checkWin({
+      type: 'wuziqi', 
+      chessInfo: chess, 
+      chessUnitWidth, 
+      list
+    })){
+      console.log('赢了');
+    }
   }
   // 悔棋
   function HuiQi() {
