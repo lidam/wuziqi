@@ -149,7 +149,7 @@ class Siziqi extends Chess {
   }
   // 判断输赢
   checkWin(chessInfo, list) {
-    console.log('正在努力建设中。。。')
+    alert('正在努力建设中。。。')
   }
 }
 // 围棋
@@ -162,6 +162,6 @@ class Weiqi extends Chess {
   }
   // 判断输赢
   checkWin(chessInfo, list) {
-    console.log('正在努力建设中。。。')
+    alert('正在努力建设中。。。')
   }
 }
