@@ -13,13 +13,23 @@
     canvas {
       background-color: #e88209;
     }
+    .select-section{
+      padding: 5px 20px;
+    }
   </style>
 </head>
 <body>
   <canvas id="tutorial" width="320" height="320"></canvas>
   <button id="HuiQi">悔棋</button>
+  <div class="select-section">
+    <span>请选择：</span>
+    <label><input type="radio" name="chessType" value="wuziqi"/>五子棋</label>
+    <label><input type="radio" name="chessType" value="siziqi"/>四子棋</label>
+    <label><input type="radio" name="chessType" value="weiqi"/>围棋</label>
+    <button id="startPlay">开始</button>
+  </div>
+  <script src="chess/Chess.js"></script>
   <script src="app.js"></script>
-  <script src="Chess.js"></script>
   <script src="network.js"></script>
 </body>
 </html>
